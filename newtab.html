@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<title>New Tab</title>
+<html lang="en" ng-app='NewTabApp' ng-csp>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/newtab.css">
+<script src='js/libs/jquery-1.8.0.min.js'></script>
+
+<script src='js/libs/jstween-1.1.min.js'></script>
+<script src='js/libs/jquery.flipcounter.js'></script>
+<script src='js/libs/angular.min.js'></script>
+<script src='js/angular-retina.js'></script>
+<script src='js/utils.js'></script>
+<script src='js/newtab.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<title></title>
+</head>
+
+<body ng-controller='EntryPointCtrl' style='display:none'>
+<!--<header>
+			<img id="tagline" ng-src="images/tag/{{mainURL}}" class='logo' />
+		</header>-->
+
+<div class="content" style='position: absolute; left: 0; '>
+<div class="col-md-12">
+<br />
+<br />
+
+<div class="col-md-12">
+  <div class="col-md-1"></div>
+  <div class="col-md-9">
+    <div class="search">
+      
+      <form  action="https://search.yahoo.com/search" method="get" class="form-horizontal search-form" >
+        <div class="input-group ">
+        
+              <div class="show_other_hidden">
+              <input type="hidden" name="hspart" value="hidden">
+              <input type="hidden" name="hsimp" value="yhs-epic">
+              </div>
+            
+             <input type="text" placeholder="Search" class="form-control"  name="p" id="searchinpout" autocomplete="off">
+            <span class="input-group-btn">
+               <button class="btn btn-primary" type="submit" id="addressSearch">
+                   <span class=""><span class="glyphicon glyphicon-search"></span></span>
+               </button>
+            </span>
+        </div>
+    </form>
+      
+    </div>
+    <div class="links_below_search pull-right"  style="position:relative; z-index:9;"><small><span class="epic_extensio">epic extension store</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="search_options">search options</span></small></div>
+     
+    
+    
+    
+    <div class="col-md-1"></div>
+  </div>
+  
+  
+  <div class="col-md-12">
+    
+    
+    <!-- Modal -->
+    <div class="messagebox" style="display:none;">
+    
+    <div class="alert fade in alert-dismissible istmessageclass" id="istmessageclass" style="background: #dcdcdc;
+    margin-bottom: 1px;"> <span style="color:green"><a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">× <small>Close</small></a></span> Current Epic users can ignore this (you should have the VPN and tracker blocker already installed). Please note that for new installations of Epic, some key Epic Functionality such as our built-in VPN / encrypted proxy is user-controlled now and should be added via the <a href="javascript:void(0)">Epic Extensions store.</a> </div>
+    <div class="modal-content " id="messageboxv" style="background: #dcdcdc; display:none;">
+      <div class="modal-body" >
+        
+        <p id="seccondcookie" class="seccondcookie" style="word-wrap: break-word; text-align:left">True, free private search on a large scale is impossible to offer at present. We have tried for years now to obtain another private search partnership
+          since Google annulled ours, but it simply isn’t possible. It’s cost us hundreds of thousands of dollars (even with the donations from thousands of you)
+          over the past few years to keep Epic going. The expense is so great at our scale we couldn’t afford to launch our mobile browsers even though they are
+          ready and fantastic. Epic everyday protects hundreds of thousands of people around the world. Our encrypted proxy/VPN is powered by hundreds of
+          servers in eight different countries. To keep Epic an ongoing project, we had to become sustainable via our search options. Epic will now have two search
+          options: free search by Yahoo & paid private search via EpicSearch.in. <br />
+          When you use Yahoo search in Epic, you’ll get better search results and support our mission including more frequent releases and hundreds more servers
+          for our encrypted proxy/VPN. According to their requirements, Yahoo search does bypass both our proxy and adblock. Upon ad click inYahoo search,
+          the proxy and adblock remain disabled for several seconds. Their goal is to insure the integrity of their search ad marketplace. Due to their policies, a few
+          other Yahoo sites including Techcrunch, Engadget, Autoblog, Huffington Post and AOL bypass our adblock. No other sites bypass our adblock or proxy so
+          Epic works almost entirely as it always has except in respect to search and the other Yahoo sites. We will continue with Yahoo to work to offer free private
+          search as we have been trying for years now. <br />
+          We believe it is impossible at present to offer honest, free private search. We‘ve received many requests to support so-called private search engines like
+          Startpage, DuckDuckGo and others. They refuse to explain to us how they work so we are unable to trust them. To our knowledge there are no exceptions to
+          Google/Bing mandates to share the user’s IP address both to retrieve search ads and upon search ad click. It is misleading to claim to be private if
+          you’re sharing your users’ data with Google/Bing. Why hide how you really work or mislead your users? Even those small search engines earn tens of millions
+          of dollars a year. We’re nearly alone in the privacy software industry in our committment to transparency, honesty and privacy. <br />
+          EpicSearch sends only your search query to a third-party to retrieve search results, never any IP or other personal information. It continues to be the
+          only reasonably true, private, search engine in the world. To sustain it and keep it ad-free, we will soon charge a nominal $2 a month fee. All Epic users
+          can use built-in Yahoo search for free. <br />
+          Thank you for your support of Epic. You’ve kept us going as well as helped change the entire tech industry focus. When Epic launched five years ago, the
+          vast majority of people in technology laughed at us saying nobody cares about privacy. Today, no one is laughing. Companies like Apple have launched
+          massive hundred million dollar ad campaigns around privacy (more marketing than truth in the case of the iPhone -- this changes a bit with the upcoming
+          Epic for iOS launch :-). We’re thrilled to now be on a sustainable path to soon serve millions of users everyday. Privacy is serious and it matters. This is Epic! <br />
+          As you know (even moreso with this message), we are transparent about how we work. My email address has always been public in that respect, one of the
+          few among technology company founders. I’m proud of our mission and committed to transparency about how and what we do.
+          Epic is not just my browser. Epic is your browser. It’s our browser.
+          Please share your thoughts and questions with me directly as always, alok at hiddenreflex dot com.</p>
+      </div>
+      <div class="modal-footer">
+        <div class="col-md-5"></div>
+        <div class="col-md-1">
+          <button type="button" class="btn btn-success" data-dismiss="modal">I've got it. Close the message</button>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="messageboxMessage2" style="position: absolute; z-index: 99999;">
+    <div class="row">
+      <div class="col-md-12"> <br />
+        <div class="alert  fade in alert-dismissible" id="search_option_dialogue" style="background:#dcdcdc; display:none; color:darkgray; margin-left:24px;"> <span style="color:green"><a href="#" class="close"  title="close">× <small>Close</small></a></span> By default, Epic is powered by Yahoo Search which sustains Epic and Keeps Epic free. If you would like true, Private search, you can subscribe to EpicSearch.in for <br />
+          a nominal fee of $2/month. If you've subscribed to EpicSearch.in and wish to change this Search Box, <span class="linkdiv"><a href="javascript:void(0)" class="chnage_search_epic">click here to set the above search box to EpicSearch.in</a></span> </div>
+      </div>
+    </div>
+    </div>
+   
+  </div>
+  
+  <div class="row">
+  <div class="col-md-12">
+  
+
+   <div class="row">
+     <div class="col-md-10">
+  <div ng-controller='SlotsCtrl' class="slotsContainer"  ng-style='slotStyle.content' style="margin-right: 50px;     margin-top: 28.3276px;">
+    <div class="slot" ng-repeat="slot in model.slots" ng-style='slotStyle.slot' style="">
+      <div class='real'  ng-show='slot.url' ng-click='openURL(slot)' ng-right-click='openContext($event, slot)'>
+        <div class="thumb" ng-style='slotStyle.thumb'><img ng-style='slotStyle.img' ng-src='{{slot.thumb}}'> </div>
+        <div class="title">{{  slot.$title }} </div>
+      </div>
+      <div class="plus" ng-style='slotStyle.plus' ng-hide='slot.url' ng-click='edit(slot)'> <img src="img/icons/plus.png" height="34" width="34" alt=""> </div>
+      
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- <div class="amazonDonates" align="center"> -->
+<object width="255" height="100%" id="newTabAd" vertical-align:middle;>
+</object>
+<!-- </div> -->
+
+<footer ng-controller='FooterCtrl'>
+<div class='footerSegment' style='position: absolute; top: 0; left: 0; text-align: left; padding-left:300px; width: 100%;'> 
+  <!--
+				<div class="footerSegment"><div id="cookiesCounter"></div></div>
+				<div class="footerSegment"> Third-party cookies blocked<div class="questionButton" ng-click="show(1)"></div></div>
+				<div class="footerSegment separator"></div>
+				-->
+  <div class="footerSegment">
+    <div id="trackersCounter"></div>
+  </div>
+  <div class="footerSegment"> trackers blocked
+    <div class="questionButton tracker" ng-click="show(2)"></div>
+  </div>
+</div>
+<div class="footerSegment" style='position: absolute; top: 0; left: 0; margin: 0px;'><img src="img/epic-logo.png"><span style="color: grey; font-size:16px;">&nbsp;&nbsp;epic private browser</span>
+  <div class="questionButton browser" ng-click="show(0)"></div>
+</div>
+<div class="footerSegment" style='position: absolute; top: 0; right: 10px; text-align: right; width: 30%; color:grey;'><a href='trackers.html' target="_blank">See Who's Spying on You in your other browsers</a> </div>
+<div class='tipAndTrick' ng-show='showTrick'>
+  <div class='header'>
+    <div class="infoIcon"></div>
+    <img ng-src="{{headerImg}}" alt="">
+    <button ng-click='close()'></button>
+  </div>
+  <div class="content" style="padding-top:75px;"><!--<img ng-src='{{contentImg}}'> --> 
+  <div class="text-center" style="color: rgb(151, 151, 151);">
+  <div class="browsershow" style="display:none">
+  
+  <p>
+
+   * Powered by Chromium with Web Services, ID Numbers Removed. *No Data Collection. * Always-On Extreme Private Browsing. </p>
+ <p> * Built-in AdBlock. * Actively Blocks thousands of websites, ad & social networks, search engines & more from tracking you.</p>
+     <p> * One-Click Proxy Sufing to hide your IP Address. * Encrypted data preference (WiFi Protection).
+    </p>
+    
+    </div>
+    
+    <div class="trackershow" style="display:none">
+  
+  <p>
+
+   
+Trackers are companies that track where and what you browse on the internet. They often associate your online data with offline </p>
+<p>data and sell your data as well as use it to show you targeted ads. Epic actively blocks thousands of trackers from tracking you and  </p>
+<p>send a do-not-track request to every site you visit. If you want to allow tracking for a particular website, </p>
+<p>click on the Umbrella button in Epic then check "No" for Block Ads and "No" for Do Not Track.Me 
+    </p>
+    
+    </div>
+    
+     </div>
+  
+  </div>
+</div>
+
+ <!--<div class="text-center" style="color: rgb(151, 151, 151);">
+  <p>
+
+   * Powered by Chromium with Web Services, ID Numbers Removed. *No Data Collection. * Always-On Extreme Private Browsing. <br />
+  * Built-in AdBlock. * Actively Blocks thousands of websites, ad & social networks, search engines & more from tracking you.<br />
+     * One-Click Proxy Sufing to hide your IP Address. * Encrypted data preference (WiFi Protection).
+    </p>
+     </div>-->
+
+
+<div class="trackersInfoSeeNowShowArrow" style='visibility:hidden'></div>
+<div class="overlay" ng-controller='OverlayCtrl' ng-show='showOverlay'></div>
+<div class="popup ng-hide" ng-controller='EditPopupCtrl' ng-show='showPopup'>
+  <h1>Enter URL</h1>
+  <input type="text" ng-model='editUrl' ng-keyup='($event.keyCode == 13)? save() : (($event.keyCode == 27)?cancel():undefined)'/>
+  <p>e.g yahoo.com, ted.com</p>
+  <button class='okButton' ng-click='save()'>Save</button>
+  <button class='cancelButton' ng-click='cancel()'>Cancel</button>
+</div>
+<div class='context-menu' ng-controller='SlotContextMenuCtrl' ng-show='visibleContext' ng-style='style'>
+  <div ng-repeat='item in menu' ng-switch="item.separator" ng-click='item.action(item)'>
+    <div class='separator' ng-switch-when='true'></div>
+    <div class='item' ng-switch-default>{{item.title}}</div>
+  </div>
+</div>
+</body>
+
+</html>

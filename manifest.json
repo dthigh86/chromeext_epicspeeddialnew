@@ -1,0 +1,14 @@
+{
+	"key":"AAAAB3NzaC1yc2EAAAABIwAAAIEA3gyS1NKFeOU9jntJYgsc1FpTelMefUgtTOqrs78HWMyhCwNRvs8vXPo4GGPzvY1/5GSG2Mb13NlYYlN5OJb677MKnjjNZA7+91lTneojUMqDFedUuiB1Ama2Ck+5SP7UgGhT8bNDXVl/M/b/n7B2tse3qQbplt1HP3NEaheHhoc=",
+    "update_url":"https://updates.epicbrowser.com/extensions/mac/updates.xml",
+	"manifest_version" : 2,
+	"name": "Speed dial",
+	"description": "Speed dial",  
+	"version": "1.4",
+
+	"background": { "scripts": ["js/libs/jquery-1.8.0.min.js", "js/utils.js", "js/background.js"] },
+
+	"chrome_url_overrides": { "newtab": "newtab.html" },
+
+	"permissions": [ "unlimitedStorage", "tabs",  "<all_urls>", "http://*/*", "https://*/*","bookmarks","cookies","webRequest","management","privacy","webRequestBlocking","<all_urls>"]
+}

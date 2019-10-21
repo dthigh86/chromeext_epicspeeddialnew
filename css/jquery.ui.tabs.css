@@ -1,0 +1,93 @@
+/*!
+ * jQuery UI Tabs 1.10.3
+ * http://jqueryui.com
+ *
+ * Copyright 2013 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	padding: .2em;
+	outline-color: transparent;
+	
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: .1em .1em 0;
+	outline-color: transparent;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	/*top: -10px;*/
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	/*padding-bottom: 12px;*/
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:5px;
+	white-space: nowrap;
+	width:20%;
+	text-align:middle;
+	/*margin:0 4.5em 0 0;*/
+	outline-color: transparent;
+	margin-left:100px;
+	margin-right:-20px;
+
+}
+.ui-tabs .ui-tabs-nav li a {
+	text-align: center;
+	outline-color: transparent;
+	min-width:10%;
+	white-space:wrap;
+	
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -4px;
+	padding-bottom: 11px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:6px;
+	background:#f8f8f8;
+	border:0px 0px 0px 0px solid #000000 
+	font-weight:normal;
+	color:#000000;
+	text-align:top;
+	outline-color: transparent;
+	display:block;
+	white-space:wrap;
+
+	
+
+	}
+	
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+	cursor: text;
+	
+}
+.ui-tabs .ui-tabs-nav li a, /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+	cursor: pointer;
+	
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	outline-color: transparent;
+	background: none;
+	
+}
+#wrapper
+{
+	margin-left:auto;
+	margin-right:auto;
+	height:100%;
+	width:960px;
+}

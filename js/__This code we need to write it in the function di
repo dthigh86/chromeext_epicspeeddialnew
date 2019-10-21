@@ -1,0 +1,33 @@
+/*This code we need to write it in the function display and need to alter it as per our requirement for accessing the id, url, urlLink, description, title etc.
+*/
+
+
+//This function prints the node value of <version>48.0.2125.111</version> as 48.0.2125.111 
+
+function display123(){
+
+	var xhr = new XMLHttpRequest();
+	xhr.open ("GET", "http://updates.epicbrowser.com/mac_updates/appcast_test.xml", true);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4) {
+			r = xhr.responseText; var dom = new DOMParser(); dom=dom.parseFromString(r,"text/xml"); var ulr = dom.getElementsByTagName("version")[0]; alert(ulr.childNodes[0].nodeValue)
+		}
+	}
+	xhr.send();
+}
+
+
+
+
+
+
+// The below code gives the url :  "http://updates.epicbrowser.com/mac_updates/tests/Epic_48.0.2125.111_.zip" 
+
+var xhr = new XMLHttpRequest();
+ xhr.open ("GET", "http://updates.epicbrowser.com/mac_updates/appcast_test.xml", true);
+ xhr.onreadystatechange = function() {
+   if (xhr.readyState == 4) {
+     r = xhr.responseText; var dom = new DOMParser(); dom=dom.parseFromString(r,"text/xml"); var ulr = dom.getElementsByTagName("enclosure")[0]; alert(ulr.getAttribute("url"))
+   }
+ }
+ xhr.send();

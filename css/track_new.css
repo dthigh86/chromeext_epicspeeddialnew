@@ -1,0 +1,425 @@
+#wrapper {
+position:relative;
+width:990px;
+height:auto;
+
+
+margin-left:auto;
+margin-right:auto;
+box-shadow:0 0 5px #b6b6b6;
+padding:20px;
+z-index:1;
+}
+
+#header {
+width:990px;
+height:250px;
+background-color:#f1f1f1;
+border-top:2px solid #dfdfdf;
+border-bottom:2px solid #dfdfdf;
+z-index:2;
+margin-left:auto;
+margin-right:auto;
+
+}
+
+
+ 
+#slider {
+width:990px;
+margin-left:0px;
+margin-top:2px;
+margin-bottom:14px;
+height:220px;
+
+	overflow:hidden;
+}
+
+#body {
+
+width:780px;
+height:180px;
+
+margin-left:auto;
+margin-right:auto;
+margin-top:10px;
+padding-top: 20px;
+padding-left:20px;
+padding-bottom:0px;
+
+overflow:hidden;
+
+
+}
+
+#content {
+
+width:990px;
+height:auto;
+border-right:1px solid #d0d7e4;
+margin-left:auto;
+margin-right:auto;
+
+
+overflow:hidden;
+
+
+}
+
+.oliver {
+  
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	color:#000;
+	font-size:12px;
+	/* text-shadow: 1px 1px 0px #fff; */
+	
+	margin-left:0px; 
+    margin-right:auto;
+	
+}
+.oliver th {
+	padding:21px 25px 22px 25px;
+}
+.oliver th:first-child {
+
+	text-align: left;
+	padding-left:20px;
+	font-size:15px;
+	
+}
+.oliver tr:first-child th:first-child {
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0 px;
+	
+}
+.oliver tr:first-child th:last-child {
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+
+}
+.oliver tr {
+    
+	text-align: left;
+	padding-left:15px;
+	
+}
+.oliver td:first-child {
+
+	text-align: left;
+	padding-left:5px;
+	border-left: 0;
+	
+}
+.oliver td {
+	padding:5px 15px 5px 30px;
+
+	
+}
+.oliver tr.even td {
+	background: #ffffff;
+	
+}
+.oliver tr:last-child td {
+	border-bottom:0;
+}
+.oliver tr:last-child td:first-child {
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+.oliver tr:last-child td:last-child {
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.trackers{
+	font-size: .8em;
+	font-weight: bold;
+	text-align:left;
+	margin-left:5px;
+	margin-top:-14px;
+}
+#right_content {
+/*border:2px solid black;*/
+border-top:1px solid #d0d7e4;
+border-left:1px solid #d0d7e4;
+
+border-bottom:1px solid #d0d7e4;
+width:704px;
+height:auto;
+float:right;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+background-color:#f5f5f5;
+margin-top:-3px;
+
+}
+#training-to-be {
+	width:500px;
+	height:200px;
+	float:left;
+	font-size:1.8em; 
+    color:#ed1c24;
+    font-family:"DroidSansRegular";
+    margin-top:-3px;
+
+}
+
+
+
+
+#services {
+float:left;
+
+list-style-type:none;
+}
+a
+{
+
+width:6em;
+text-decoration:none;
+
+}
+li:hover {
+    cursor: hand;
+}
+
+#services li{
+	text-decoration:none;
+	display:block;
+	width:282px;
+	height:70px;
+	text-align:left;
+	margin-left:-40px;
+	margin-top:-15px;
+	margin-bottom:15px;
+	background-color:white;
+	padding-top:0px;
+	border-top:1px #d0d7e4 solid;
+	border-left:1px #d0d7e4  solid;
+	border-bottom:1px #d0d7e4  solid;
+	border-right:1px #d0d7e4  solid;
+	
+}
+
+
+#services li a:hover{
+	text-decoration:none;
+	
+	color:#da251d;
+	
+
+}
+#services li:hover{
+	
+	display:block;
+}
+
+#services li.active-side-nav{
+
+
+display:block;
+	width:282px;
+	height:70px;
+	background-color:#f8f8f8;
+	color:#da251d;
+	border-left:2px #da251d solid;
+	border-top:1px #d0d7e4 solid;
+	
+	}
+
+#left_content {
+width:210px;
+background-color:white;
+float:left;
+margin-top:0px;
+height:250px;
+margin-left:0px;
+
+
+}
+.clear{
+clear:both;
+}
+
+#left_content p{
+	line-height:25px;
+	text-align:justify;
+}
+
+#left_top_content{
+width:800px;
+background-color:black;
+
+height:200px;
+
+}
+
+#left_top_content p{
+	line-height:25px;
+}
+#left_top_content1{
+width:330px;
+height:250px;
+background-color:white;
+float:left;
+
+}
+
+#left_top_content2{
+width:370px;
+height:180px;
+background-color:white;
+float:right;
+margin-left:auto;
+margin-right:auto;
+margin-top:50px;
+}
+#left_top_content_supply{
+width:710px;
+height:100%;
+background-color:white;
+float:left;
+
+}
+
+#left_content_part1 {
+width:220px;
+height:100%;
+background-color:white;
+float:left;
+margin-left:-5px;
+font-family:"DroidSansRegular";
+font-size:0.4 em;
+padding:0px 10px;
+margin-top:45px;
+
+}
+
+#new{
+		border-top:3px #d0d7e4 solid;
+width:710px;
+height:auto;
+background-color:#f8f8f8;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+}	
+#gog{
+
+/*border:2px solid #dfdfdf;*/
+border-right:10px solid #d0d4de;
+width:710px;
+height:auto;
+
+
+background-color:#f8f8f8;
+text-align:left;
+letter-spacing:1px;
+overflow:hidden;
+z-index:2;
+
+}
+#fee {
+
+/*border:2px solid #dfdfdf;*/
+width:710px;
+height:auto;
+
+font-family:"DroidSansRegular";
+background-color:#f8f8f8;
+text-align:left;
+letter-spacing:1px;
+overflow:hidden;
+
+}
+#iee{
+
+/*border:2px solid #dfdfdf;*/
+width:710px;
+height:auto;
+background-color:#f8f8f8;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+overflow:hidden;
+}
+#t1{
+
+
+width:710px;
+height:auto;
+background-color:#f8f8f8;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+margin-left:0px;
+margin-right:-25px;
+}	
+#firefoxx{
+
+width:710px;
+height:auto;
+background-color:#f8f8f8;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+overflow:hidden;
+
+
+}
+#google{
+background-color:#f8f8f8;
+width:710px;
+height:auto;
+margin-left:18px;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+
+overflow:hidden;
+}
+
+#ie{
+background-color:#f8f8f8;
+width:710px;
+height:auto;
+margin-left:18px;
+font-family:"DroidSansRegular";
+font-size:1.2em;
+text-align:left;
+letter-spacing:1px;
+
+overflow:hidden;
+}	
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+  text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 100px;
+  left: 240px;
+  z-index: 100;
+}
+.trackers{
+	font-size: .7em;
+	font-weight: bold;
+	font-color: black;
+}
